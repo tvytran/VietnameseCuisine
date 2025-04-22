@@ -1,0 +1,121 @@
+
+<!-- templates/quiz_results.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Quiz Results{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h1 class="h3 mb-0">Quiz Complete!</h1>
+            </div>
+            <div class="card-body text-center">
+                <h2 class="card-title">Your Score:</h2>
+                
+                <div class="display-1 my-4">
+                    {{ user_data.score }} / {{ total_questions }}
+                </div>
+                
+                {% set percentage = (user_data.score / total_questions) * 100 %}
+                
+                <div class="progress mb-4" style="height: 30px;">
+                    <div class="progress-bar {% if percentage >= 80 %}bg-success{% elif percentage >= 60 %}bg-info{% elif percentage >= 40 %}bg-warning{% else %}bg-danger{% endif %}" 
+                         role="progressbar" 
+                         style="width: {{ percentage }}%;" 
+                         aria-valuenow="{{ percentage }}" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100">
+                        {{ percentage|int }}%
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    {% if percentage >= 80 %}
+                    <div class="alert alert-success">
+                        <h4>Excellent job!</h4>
+                        <p>You have a great understanding of Vietnamese regional cuisines.</p>
+                    </div>
+                    {% elif percentage >= 60 %}
+                    <div class="alert alert-info">
+                        <h4>Good work!</h4>
+                        <p>You have a solid foundation of knowledge about Vietnamese regional cuisines.</p>
+                    </div>
+                    {% elif percentage >= 40 %}
+                    <div class="alert alert-warning">
+                        <h4>Not bad!</h4>
+                        <p>You have some knowledge, but could benefit from reviewing the material again.</p>
+                    </div>
+                    {% else %}
+                    <div class="alert alert-danger">
+                        <h4>Keep learning!</h4>
+                        <p>We recommend going through the learning materials again to improve your knowledge.</p>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="{{ url_for('quiz_start') }}" class="btn btn-primary">Try Again</a>
+                    <a href="{{ url_for('general') }}" class="btn btn-success">Continue Learning</a>
+                    <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">Back to Home</a>
+                </div>
+                
+                <!-- Collect additional feedback -->
+                <div class="mt-5">
+                    <h5>We'd love your feedback!</h5>
+                    <form id="feedback-form" class="mt-3">
+                        <div class="mb-3">
+                            <label for="user-name" class="form-label">Your Name (optional)</label>
+                            <input type="text" class="form-control" id="user-name" name="user_name">
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="found-helpful" name="found_helpful">
+                                <label class="form-check-label" for="found-helpful">
+                                    I found this learning experience helpful
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comments" class="form-label">Any comments or suggestions?</label>
+                            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#feedback-form').submit(function(e) {
+            e.preventDefault();
+            
+            // Gather form data
+            let formData = {
+                user_name: $('#user-name').val(),
+                found_helpful: $('#found-helpful').is(':checked'),
+                comments: $('#comments').val()
+            };
+            
+            // Send to backend
+            $.ajax({
+                type: 'POST',
+                url: '{{ url_for('save_user_data') }}',
+                data: formData,
+                success: function(response) {
+                    // Show success message
+                    $('#feedback-form').html('<div class="alert alert-success">Thank you for your feedback!</div>');
+                },
+                error: function(error) {
+                    console.log(error);
+                    alert('There was an error submitting your feedback. Please try again.');
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

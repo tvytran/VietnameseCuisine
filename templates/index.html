@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Explore Vietnamese Regional Cuisines{% endblock %}
+
+{% block content %}
+<div class="row align-items-center">
+    <div class="col-md-6">
+        <div class="text-center">
+            <h1 class="display-4 mb-4">Explore Vietnamese Regional Cuisines</h1>
+            <p class="lead">Discover the unique flavors and culinary traditions of Vietnam's distinct regions</p>
+            <div class="mt-5">
+                <a href="{{ url_for('general') }}" class="btn btn-lg btn-primary">Begin Journey</a>
+                <a href="{{ url_for('quiz_start') }}" class="btn btn-lg btn-outline-primary ms-3">Quiz Yourself</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='img/vietnam_map.jpg') }}" alt="Map of Vietnam" class="img-fluid rounded">
+    </div>
+</div>
+{% endblock %}

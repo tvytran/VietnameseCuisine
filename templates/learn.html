@@ -1,0 +1,88 @@
+<!-- templates/learn.html -->
+{% extends 'layout.html' %}
+
+{% block title %}{{ region.name }} Vietnamese Cuisine{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">{{ region.name }} Vietnamese Cuisine</h1>
+
+<div class="row mb-4">
+    <div class="col-lg-8 mx-auto">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">Key Characteristics</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    {% for characteristic in region.key_characteristics %}
+                    <li class="list-group-item">{{ characteristic }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+        <h3>Flavor Profile</h3>
+        <div class="row">
+            <div class="col">
+                <div class="progress mb-3" style="height: 25px;">
+                    <div class="progress-bar" role="progressbar" style="width: {{ region.flavor_profile.savory * 20 }}%;" aria-valuenow="{{ region.flavor_profile.savory }}" aria-valuemin="0" aria-valuemax="5">Savory</div>
+                </div>
+                <div class="progress mb-3" style="height: 25px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ region.flavor_profile.sweet * 20 }}%;" aria-valuenow="{{ region.flavor_profile.sweet }}" aria-valuemin="0" aria-valuemax="5">Sweet</div>
+                </div>
+                <div class="progress mb-3" style="height: 25px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: {{ region.flavor_profile.spicy * 20 }}%;" aria-valuenow="{{ region.flavor_profile.spicy }}" aria-valuemin="0" aria-valuemax="5">Spicy</div>
+                </div>
+                <div class="progress mb-3" style="height: 25px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: {{ region.flavor_profile.herbs * 20 }}%;" aria-valuenow="{{ region.flavor_profile.herbs }}" aria-valuemin="0" aria-valuemax="5">Herbs</div>
+                </div>
+                <div class="progress mb-3" style="height: 25px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: {{ region.flavor_profile.fermented * 20 }}%;" aria-valuenow="{{ region.flavor_profile.fermented }}" aria-valuemin="0" aria-valuemax="5">Fermented</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-lg-8 mx-auto">
+        <h3>Signature Ingredients</h3>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+            {% for ingredient in region.signature_ingredients %}
+            <span class="badge bg-secondary fs-5 p-2">{{ ingredient }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h3 class="text-center mb-4">Representative Dishes</h3>
+    </div>
+    {% for image in region.images %}
+    <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100">
+            <img src="{{ image }}" class="card-img-top" alt="{{ region.name }} dish">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ region.name }} Style</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row mt-4">
+    <div class="col-12 text-center">
+        {% if next_lesson %}
+        <a href="{{ url_for('learn', lesson_id=next_lesson) }}" class="btn btn-primary">Next Region</a>
+        {% else %}
+        <a href="{{ url_for('compare_dish', dish_name='Pho') }}" class="btn btn-primary">Compare Dishes</a>
+        {% endif %}
+        <a href="{{ url_for('general') }}" class="btn btn-outline-secondary ms-3">Back to Overview</a>
+    </div>
+</div>
+{% endblock %}

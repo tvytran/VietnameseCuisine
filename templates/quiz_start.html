@@ -1,0 +1,43 @@
+<!-- templates/quiz_start.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Quiz - Vietnamese Cuisine{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h1 class="h3 mb-0">Test Your Knowledge</h1>
+            </div>
+            <div class="card-body text-center">
+                <h2 class="card-title">Vietnamese Regional Cuisine Quiz</h2>
+                <p class="card-text lead">Ready to test your knowledge about Vietnamese regional cuisines? This quiz will cover different aspects of Northern, Central, and Southern Vietnamese cooking traditions.</p>
+                
+                <div class="mt-4 mb-4">
+                    <h5>Select Difficulty:</h5>
+                    <div class="btn-group" role="group" aria-label="Quiz difficulty">
+                        <button type="button" class="btn btn-outline-success active" data-difficulty="easy">Easy</button>
+                        <button type="button" class="btn btn-outline-success" data-difficulty="medium">Medium</button>
+                        <button type="button" class="btn btn-outline-success" data-difficulty="difficult">Difficult</button>
+                    </div>
+                </div>
+                
+                <a href="{{ url_for('quiz', question_id=1) }}" class="btn btn-lg btn-success mt-3">Start Quiz</a>
+                <a href="{{ url_for('general') }}" class="btn btn-lg btn-outline-secondary mt-3 ms-3">Back to Learning</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Store selected difficulty in localStorage
+    $(document).ready(function() {
+        $('.btn-group .btn').click(function() {
+            $('.btn-group .btn').removeClass('active');
+            $(this).addClass('active');
+            localStorage.setItem('quizDifficulty', $(this).data('difficulty'));
+        });
+    });
+</script>
+{% endblock %}

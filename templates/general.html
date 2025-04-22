@@ -1,0 +1,62 @@
+<!-- templates/general.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Vietnamese Cuisine Overview{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Vietnamese Cuisine: Regional Overview</h1>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Region</th>
+                <th>Flavor Profile</th>
+                <th>Key Ingredients</th>
+                <th>Major Influences</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for region in regions %}
+            <tr>
+                <td>{{ region.name }}</td>
+                <td>
+                    {% if region.name == "Northern" %}
+                    Subtle, balanced
+                    {% elif region.name == "Central" %}
+                    Spicy, Complex
+                    {% else %}
+                    Sweet, herb-forward
+                    {% endif %}
+                </td>
+                <td>
+                    {% if region.name == "Northern" %}
+                    Black pepper, Fish Sauce
+                    {% elif region.name == "Central" %}
+                    Chili, Lemongrass
+                    {% else %}
+                    Coconut Milk, herbs
+                    {% endif %}
+                </td>
+                <td>
+                    {% if region.name == "Northern" %}
+                    Chinese
+                    {% elif region.name == "Central" %}
+                    Royal Cuisine
+                    {% else %}
+                    Thai, Cambodia
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12 text-center">
+        <a href="{{ url_for('learn', lesson_id=1) }}" class="btn btn-primary btn-lg">Start Your Regional Journey</a>
+        <a href="{{ url_for('home') }}" class="btn btn-outline-secondary btn-lg ms-3">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

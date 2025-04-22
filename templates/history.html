@@ -1,0 +1,39 @@
+<!-- templates/history.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Historical Influences - {{ history_item.title }}{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Historical Influences on Vietnamese Cuisine</h1>
+<h2 class="text-center mb-4">{{ history_item.title }}</h2>
+
+<div class="row align-items-center mb-5">
+    <div class="col-md-6">
+        <img src="{{ history_item.image }}" class="img-fluid rounded" alt="{{ history_item.title }}">
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="lead">{{ history_item.content }}</p>
+                <h5 class="mt-4">Key Elements:</h5>
+                <ul class="list-group list-group-flush">
+                    {% for point in history_item.key_points %}
+                    <li class="list-group-item">{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12 text-center">
+        {% if next_history %}
+        <a href="{{ url_for('history_page', history_id=next_history) }}" class="btn btn-primary">Next Influence</a>
+        {% else %}
+        <a href="{{ url_for('quiz_start') }}" class="btn btn-primary">Take Quiz</a>
+        {% endif %}
+        <a href="{{ url_for('general') }}" class="btn btn-outline-secondary ms-3">Back to Overview</a>
+    </div>
+</div>
+{% endblock %}

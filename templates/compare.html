@@ -1,0 +1,54 @@
+<!-- templates/compare.html -->
+{% extends 'layout.html' %}
+
+{% block title %}{{ dish.name }} Regional Variations{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">{{ dish.name }} Regional Variations</h1>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="btn-group w-100" role="group" aria-label="Dish navigation">
+            {% for d in dishes %}
+            <a href="{{ url_for('compare_dish', dish_name=d.name) }}" class="btn {% if d.name == dish.name %}btn-primary{% else %}btn-outline-primary{% endif %}">{{ d.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {% for variation in dish.regional_variations %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header bg-dark text-white">
+                <h3 class="h5 mb-0">{{ variation.region }}</h3>
+            </div>
+            <img src="{{ variation.image }}" class="card-img-top" alt="{{ variation.region }} {{ dish.name }}">
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    {% for characteristic in variation.characteristics %}
+                    <li class="list-group-item">{{ characteristic }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row mt-4">
+    <div class="col-12 text-center">
+        {% if dish.name == 'Pho' %}
+        <a href="{{ url_for('compare_dish', dish_name='Banh Xeo') }}" class="btn btn-primary">Next Comparison</a>
+        {% elif dish.name == 'Banh Xeo' %}
+        <a href="{{ url_for('compare_dish', dish_name='Banh Mi') }}" class="btn btn-primary">Next Comparison</a>
+        {% elif dish.name == 'Banh Mi' %}
+        <a href="{{ url_for('compare_dish', dish_name='Ca Phe') }}" class="btn btn-primary">Next Comparison</a>
+        {% else %}
+        <a href="{{ url_for('history_page', history_id=1) }}" class="btn btn-primary">Explore History</a>
+        {% endif %}
+        <a href="{{ url_for('general') }}" class="btn btn-outline-secondary ms-3">Back to Overview</a>
+        <a href="{{ url_for('quiz_start') }}" class="btn btn-success ms-3">Quiz Yourself</a>
+    </div>
+</div>
+{% endblock %}
