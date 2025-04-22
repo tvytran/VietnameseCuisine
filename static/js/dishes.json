@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Pho",
+        "description": "Pho is a Vietnamese soup consisting of broth, rice noodles, herbs, and meat (usually beef or chicken). It is a popular street food in Vietnam and served in restaurants around the world.",
+        "regional_variations": [
+            {
+                "region": "Northern",
+                "characteristics": [
+                    "Clear, Delicate broth",
+                    "Minimal Garnishes",
+                    "Black Pepper",
+                    "Broth Quality Emphasis"
+                ],
+                "image": "/static/img/pho_northern.jpg",
+                "description": "Northern Pho, particularly from Hanoi, is characterized by a clear, delicate broth with a focus on subtle flavors. It typically comes with minimal garnishes and uses black pepper rather than chili for heat. The quality of the broth is emphasized above all else."
+            },
+            {
+                "region": "Central",
+                "characteristics": [
+                    "Spicier Broth",
+                    "More herbs",
+                    "Chili and Lime",
+                    "Bun bo Hue influence"
+                ],
+                "image": "/static/img/pho_central.jpg",
+                "description": "Central Vietnamese Pho has a spicier broth influenced by the region's love for heat. It often includes more herbs than the Northern version and is frequently served with chili and lime on the side. The famous Bun Bo Hue (beef noodle soup from Hue) influences the style and flavor profile."
+            },
+            {
+                "region": "Southern",
+                "characteristics": [
+                    "Sweeter, richer broth",
+                    "Bean Sprouts, herbs",
+                    "Hoisin and Sriracha Sauces",
+                    "More garnish options"
+                ],
+                "image": "/static/img/pho_southern.jpg",
+                "description": "Southern Pho, especially from Ho Chi Minh City (Saigon), features a sweeter, richer broth. It's typically served with a large plate of garnishes including bean sprouts, herbs, lime, and chili. Hoisin and Sriracha sauces are commonly added at the table, which is less traditional in the north."
+            }
+        ]
+    },
+    {
+        "name": "Banh Xeo",
+        "description": "Banh Xeo is a crispy, savory Vietnamese pancake made of rice flour, water, and turmeric powder, filled with pork, shrimp, and bean sprouts. It is served with fresh herbs and dipping sauce.",
+        "regional_variations": [
+            {
+                "region": "Northern",
+                "characteristics": [
+                    "Smaller, thicker",
+                    "Simple fillings",
+                    "Less turmeric",
+                    "Milder dipping sauce"
+                ],
+                "image": "/static/img/banhxeo_northern.jpg",
+                "description": "Northern Banh Xeo tends to be smaller and thicker than its southern counterpart. It typically contains simpler fillings and uses less turmeric, resulting in a paler color. The dipping sauce is usually milder, reflecting the region's preference for subtle flavors."
+            },
+            {
+                "region": "Central",
+                "characteristics": [
+                    "Tiny, bite sized",
+                    "Extra crispy",
+                    "Shrimp, bean sprouts",
+                    "Spicy Fish Sauce"
+                ],
+                "image": "/static/img/banhxeo_central.jpg",
+                "description": "In Central Vietnam, particularly in Hue, Banh Xeo is often made in tiny, bite-sized portions that are extra crispy. They frequently contain shrimp and bean sprouts and are served with a spicier fish sauce for dipping, reflecting the region's preference for heat."
+            },
+            {
+                "region": "Southern",
+                "characteristics": [
+                    "Large, family-sized",
+                    "Vibrant Yellow",
+                    "Coconut Milk in batter",
+                    "Many Herbs, lettuce wraps"
+                ],
+                "image": "/static/img/banhxeo_southern.jpg",
+                "description": "Southern Banh Xeo is the most well-known version. It is large, often family-sized, with a vibrant yellow color from generous turmeric use. The batter typically includes coconut milk for richness and flavor. It's traditionally served with a large plate of herbs and lettuce for wrapping before dipping in sauce."
+            }
+        ]
+    },
+    {
+        "name": "Banh Mi",
+        "description": "Banh Mi is a Vietnamese sandwich made with a French baguette filled with various ingredients like meats, pate, pickled vegetables, and herbs. It represents the French colonial influence on Vietnamese cuisine.",
+        "regional_variations": [
+            {
+                "region": "Northern",
+                "characteristics": [
+                    "Less stuffed",
+                    "Pate emphasis",
+                    "Chewier Bread",
+                    "Fewer Herbs"
+                ],
+                "image": "/static/img/banhmi_northern.jpg",
+                "description": "Northern Banh Mi tends to be less stuffed than southern versions, with more emphasis on pate (a French influence). The bread is often chewier and the sandwich contains fewer herbs, staying true to the region's more subtle flavor profile."
+            },
+            {
+                "region": "Central",
+                "characteristics": [
+                    "Spicier chili",
+                    "Special sauces",
+                    "Regional Proteins",
+                    "Smaller Size"
+                ],
+                "image": "/static/img/banhmi_central.jpg",
+                "description": "Central Vietnamese Banh Mi often features spicier chilis and special regional sauces. It may contain proteins specific to the region, such as nem chua (fermented pork). The sandwiches are typically smaller in size compared to other regions."
+            },
+            {
+                "region": "Southern",
+                "characteristics": [
+                    "Generous Fillings",
+                    "More herbs & Pickles",
+                    "Crispier Crust",
+                    "Sweet-savory balance"
+                ],
+                "image": "/static/img/banhmi_southern.jpg",
+                "description": "Southern Banh Mi is characterized by generous fillings, including a variety of meats, and abundant herbs and pickled vegetables. The bread typically has a crispier crust and softer interior. The flavor profile balances sweet and savory elements, reflective of southern Vietnamese cuisine."
+            }
+        ]
+    },
+    {
+        "name": "Ca Phe",
+        "description": "Vietnamese coffee (Ca Phe) is known for its strong flavor, typically brewed with a metal Vietnamese coffee filter (phin) and often served with sweetened condensed milk. Vietnam is one of the world's largest coffee producers.",
+        "regional_variations": [
+            {
+                "region": "Northern",
+                "characteristics": [
+                    "Less Sweet",
+                    "Dark roast",
+                    "Often hot",
+                    "Ca phe trung (egg coffee)"
+                ],
+                "image": "/static/img/caphe_northern.jpg",
+                "description": "Northern Vietnamese coffee, particularly in Hanoi, tends to be less sweet and uses darker roasts. It's often served hot, reflecting the cooler climate of the region. A specialty of the North is Ca Phe Trung (egg coffee), a creamy concoction made with egg yolks, sugar, and coffee."
+            },
+            {
+                "region": "Central",
+                "characteristics": [
+                    "Medium Sweetness",
+                    "Medium dark roast",
+                    "Salt variation in Hue",
+                    "Unique local blends"
+                ],
+                "image": "/static/img/caphe_central.jpg",
+                "description": "Central Vietnamese coffee strikes a balance in sweetness and typically uses medium-dark roasts. In Hue, there's a unique variation that includes a pinch of salt. The region is known for its unique local coffee blends that reflect the diverse influences on central Vietnamese cuisine."
+            },
+            {
+                "region": "Southern",
+                "characteristics": [
+                    "Very sweet",
+                    "Often iced",
+                    "Ca phe sua da (iced milk coffee)",
+                    "Robusta beans dominant"
+                ],
+                "image": "/static/img/caphe_southern.jpg",
+                "description": "Southern Vietnamese coffee, especially in Ho Chi Minh City, is typically very sweet and often served iced (Ca Phe Sua Da) due to the hot climate. The region primarily uses Robusta beans, which were introduced during the French colonial period and thrive in the southern climate."
+            }
+        ]
+    }
+]

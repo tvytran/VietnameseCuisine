@@ -1,0 +1,149 @@
+/* static/css/style.css */
+:root {
+    --vietnamese-red: #da251d;
+    --vietnamese-yellow: #ffcd00;
+    --light-pink: #ffd6d6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff9f9;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 70px; /* Space for footer */
+}
+
+.navbar {
+    background-color: var(--vietnamese-red) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.dropdown-item:hover {
+    background-color: #ffe6e6;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #333;
+}
+
+.btn-primary {
+    background-color: var(--vietnamese-red);
+    border-color: var(--vietnamese-red);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #b21c16;
+    border-color: #b21c16;
+}
+
+.btn-outline-primary {
+    color: var(--vietnamese-red);
+    border-color: var(--vietnamese-red);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: var(--vietnamese-red);
+    border-color: var(--vietnamese-red);
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.bg-primary, .btn-primary, .progress-bar {
+    background-color: var(--vietnamese-red) !important;
+    border-color: var(--vietnamese-red) !important;
+}
+
+.bg-success, .btn-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: var(--vietnamese-red) !important;
+}
+
+/* Home page styling */
+.home-hero {
+    background-color: var(--light-pink);
+    padding: 3rem 0;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+/* Region learning pages */
+.flavor-profile {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+/* Quiz styling */
+.list-group-item-action:hover {
+    background-color: #ffe6e6;
+}
+
+.list-group-item input[type="radio"] {
+    cursor: pointer;
+}
+
+/* Dish comparison */
+.dish-comparison-header {
+    background-color: var(--light-pink);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        padding-top: 0.5rem;
+    }
+    
+    .home-hero {
+        padding: 2rem 0;
+    }
+    
+    .card-deck {
+        display: block;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}

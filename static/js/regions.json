@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name": "Northern",
+        "flavor_profile": {
+            "savory": 5,
+            "sweet": 2,
+            "spicy": 2,
+            "herbs": 3,
+            "fermented": 4
+        },
+        "key_characteristics": [
+            "Subtle, balanced flavors",
+            "Less herbs, more black pepper",
+            "More savory than sweet",
+            "Influence from Chinese Cuisine"
+        ],
+        "signature_ingredients": ["Black Pepper", "Fish Sauce", "Ginger"],
+        "images": [
+            "/static/img/northern_dish1.jpg",
+            "/static/img/northern_dish2.jpg",
+            "/static/img/northern_dish3.jpg",
+            "/static/img/northern_dish4.jpg"
+        ],
+        "description": "Northern Vietnamese cuisine is characterized by its subtle, balanced flavors with less sweetness than other regions. It shows strong Chinese influence due to the historical connection and geographical proximity to China. The cuisine emphasizes the quality of the main ingredients, using fewer herbs and spices compared to other regions, with black pepper as the primary source of heat rather than chili."
+    },
+    {
+        "id": 2,
+        "name": "Central",
+        "flavor_profile": {
+            "savory": 4,
+            "sweet": 3,
+            "spicy": 5,
+            "herbs": 4,
+            "fermented": 3
+        },
+        "key_characteristics": [
+            "Spicy and complex flavors",
+            "Bold use of Chili",
+            "Royal Cuisine Influence",
+            "Elaborate Presentations"
+        ],
+        "signature_ingredients": ["Chili", "Lemongrass", "Shrimp Paste"],
+        "images": [
+            "/static/img/central_dish1.jpg",
+            "/static/img/central_dish2.jpg",
+            "/static/img/central_dish3.jpg",
+            "/static/img/central_dish4.jpg"
+        ],
+        "description": "Central Vietnamese cuisine is known for its bold, spicy flavors and complex preparations. The imperial heritage of Hue, the ancient capital, continues to influence the region's cooking with elaborate presentations and diverse flavors in a single meal. Dishes tend to be spicier than both Northern and Southern cuisines, featuring abundant chili and the distinct fermented shrimp paste known as 'mam tom'."
+    },
+    {
+        "id": 3,
+        "name": "Southern",
+        "flavor_profile": {
+            "savory": 3,
+            "sweet": 5,
+            "spicy": 3,
+            "herbs": 5,
+            "fermented": 2
+        },
+        "key_characteristics": [
+            "Sweet and Vibrant Flavors",
+            "Abundant Fresh Herbs",
+            "Use of Coconut Milk and Palm Sugar",
+            "Thai and Cambodian Influence"
+        ],
+        "signature_ingredients": ["Coconut Milk", "Palm Sugar", "Fresh Herbs"],
+        "images": [
+            "/static/img/southern_dish1.jpg",
+            "/static/img/southern_dish2.jpg",
+            "/static/img/southern_dish3.jpg",
+            "/static/img/southern_dish4.jpg"
+        ],
+        "description": "Southern Vietnamese cuisine is characterized by its sweetness, vibrant flavors, and abundant use of fresh herbs and vegetables. The tropical climate allows for year-round agriculture, resulting in a diverse range of ingredients. Influences from Thai and Cambodian cuisines are evident in the use of coconut milk, palm sugar, and specific herbs. The cuisine is generally sweeter than that of other regions."
+    }
+]

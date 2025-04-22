@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "question": "Which region is known for its abundant use of fresh herbs and sweetness in dishes?",
+        "options": [
+            "Northern Vietnam",
+            "Central Vietnam",
+            "Southern Vietnam",
+            "All regions Equally"
+        ],
+        "correct_answer": "Southern Vietnam",
+        "explanation": "Southern Vietnamese cuisine is characterized by its abundant use of fresh herbs and a generally sweeter flavor profile compared to other regions. This is influenced by the tropical climate that allows for year-round herb cultivation and influences from neighboring cuisines like Thai and Cambodian.",
+        "hint": "Think about the influence of neighboring countries like Thailand and Cambodia."
+    },
+    {
+        "id": 2,
+        "question": "Which region would typically feature coconut milk in their Banh Xeo batter?",
+        "options": [
+            "Northern Vietnam",
+            "Central Vietnam",
+            "Southern Vietnam"
+        ],
+        "correct_answer": "Southern Vietnam",
+        "explanation": "Southern Vietnamese Banh Xeo typically includes coconut milk in the batter, which gives it a richer flavor and distinctive texture. This reflects the Southern region's adoption of ingredients common in Southeast Asian cuisines like Thai and Cambodian cooking.",
+        "image": "/static/img/banhxeo_southern.jpg",
+        "hint": "This region's cuisine has significant Thai and Cambodian influences."
+    },
+    {
+        "id": 3,
+        "question": "Which dish is shown in this image and which region would it likely be from?",
+        "options": [
+            "Northern-style Com Tam",
+            "Central-style Bun Bo Hue",
+            "Southern-style Com Tam"
+        ],
+        "correct_answer": "Southern-style Com Tam",
+        "explanation": "The image shows Com Tam (broken rice) with typical Southern Vietnamese presentation, featuring a variety of toppings, generous herbs, and the signature sweet-savory flavor profile of Southern cuisine.",
+        "image": "/static/img/quiz_food.jpg",
+        "hint": "Look at the abundance of fresh herbs and the sweet-savory balance in the dish."
+    },
+    {
+        "id": 4,
+        "question": "Which flavor profile best matches Northern Vietnamese cuisine?",
+        "options": [
+            "Sweet, herb-forward, coconut-based",
+            "Spicy, complex, royal influence",
+            "Savory, balanced, black pepper, Chinese influence"
+        ],
+        "correct_answer": "Savory, balanced, black pepper, Chinese influence",
+        "explanation": "Northern Vietnamese cuisine is characterized by its savory, balanced flavors with a preference for black pepper over chili for heat. It shows strong Chinese influence due to the region's proximity to China and historical connections.",
+        "hint": "Consider the geographical proximity to China and its influence on Northern Vietnamese cooking."
+    },
+    {
+        "id": 5,
+        "question": "Which historical influence introduced baguettes to Vietnamese cuisine, leading to the creation of Banh Mi?",
+        "options": [
+            "Chinese",
+            "Thai/Cambodian",
+            "French",
+            "Indigenous"
+        ],
+        "correct_answer": "French",
+        "explanation": "Baguettes were introduced to Vietnam during the French colonial period (1887-1954), eventually leading to the creation of Banh Mi, a fusion dish that combines the French baguette with Vietnamese flavors and ingredients.",
+        "hint": "Think about the colonial period in Vietnam from 1887-1954."
+    },
+    {
+        "id": 6,
+        "question": "Which region's Pho typically features the most garnishes and table condiments?",
+        "options": [
+            "Northern",
+            "Central",
+            "Southern"
+        ],
+        "correct_answer": "Southern",
+        "explanation": "Southern-style Pho, particularly from Ho Chi Minh City (Saigon), is typically served with a large plate of garnishes including bean sprouts, herbs, lime, and chili. Table condiments like hoisin and sriracha sauces are commonly added in the South but less so in the North.",
+        "hint": "This region generally embraces more abundant fresh herbs and additions to dishes."
+    },
+    {
+        "id": 7,
+        "question": "Which of these is NOT typically found in Central Vietnamese cuisine?",
+        "options": [
+            "Spicy flavors",
+            "Complex preparations",
+            "Abundant use of coconut milk",
+            "Royal cuisine influence"
+        ],
+        "correct_answer": "Abundant use of coconut milk",
+        "explanation": "While Central Vietnamese cuisine is known for its spicy flavors, complex preparations, and royal cuisine influence from the imperial city of Hue, coconut milk is more commonly used in Southern Vietnamese cuisine rather than Central.",
+        "hint": "Think about which ingredient is more characteristic of Southern cuisine with its Thai and Cambodian influences."
+    },
+    {
+        "id": 8,
+        "question": "What is the specialty coffee preparation from Northern Vietnam?",
+        "options": [
+            "Ca Phe Sua Da (iced coffee with condensed milk)",
+            "Ca Phe Trung (egg coffee)",
+            "Ca Phe Muoi (salt coffee)",
+            "Ca Phe Den Da (iced black coffee)"
+        ],
+        "correct_answer": "Ca Phe Trung (egg coffee)",
+        "explanation": "Ca Phe Trung, or egg coffee, is a specialty of Northern Vietnam, particularly Hanoi. It's prepared with egg yolks, sugar, and coffee, creating a creamy, dessert-like beverage.",
+        "image": "/static/img/caphe_northern.jpg",
+        "hint": "This unique preparation involves an ingredient not commonly associated with coffee in most parts of the world."
+    },
+    {
+        "id": 9,
+        "question": "Which region's Banh Xeo is typically made in tiny, bite-sized portions?",
+        "options": [
+            "Northern",
+            "Central",
+            "Southern"
+        ],
+        "correct_answer": "Central",
+        "explanation": "In Central Vietnam, particularly in Hue, Banh Xeo is often made in tiny, bite-sized portions that are extra crispy, contrasting with the large, family-sized versions common in the South.",
+        "hint": "This region is known for its refined, complex cuisine influenced by royal traditions."
+    },
+    {
+        "id": 10,
+        "question": "Match the following ingredients to their most associated region: Coconut Milk, Black Pepper, Chili",
+        "options": [
+            "Northern, Central, Southern",
+            "Southern, Northern, Central",
+            "Central, Southern, Northern",
+            "Southern, Central, Northern"
+        ],
+        "correct_answer": "Southern, Northern, Central",
+        "explanation": "Coconut Milk is most associated with Southern Vietnamese cuisine due to Thai and Cambodian influences. Black Pepper is characteristic of Northern cuisine as the preferred heat source over chili. Chili is prominently used in Central Vietnamese cuisine, known for its spiciness.",
+        "hint": "Think about the primary flavor profiles and influences of each region."
+    }
+]
